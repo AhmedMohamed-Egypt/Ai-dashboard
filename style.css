@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @theme {
+  --color-white-700:#ffffffb3;
  --color-wizard-black: #212121;
  --color-wizard-black200:#21212133;
+ --color-wizard-black700:#212121b3;
  --color-wizard-grey:#888888;
  --color-wizard-lightGrey:#303030;
  --color-green100: #DDFFFE;
@@ -13,6 +15,7 @@
  
  
  /*bg*/
+ --background-image-black200:linear-gradient(90deg, rgba(47, 47, 41, 0.20) 50%, rgba(22, 18, 20, 0.20) 75%);
    --background-image-completed:linear-gradient(180deg, rgba(203, 238, 214, 0.2) 0%, rgba(74, 126, 208, 0.2) 100%);
   --background-image-notify: linear-gradient(
     -90deg,
@@ -28,17 +31,21 @@
   --background-image-voicebtn:linear-gradient(90deg, rgba(96, 82, 169, 0.2) 0%, rgba(232, 232, 225, 0.2) 50%, rgba(199, 181, 193, 0.2) 75%, rgba(153, 83, 107, 0.2) 100%);
   --background-image-chatbar:linear-gradient(-180deg, rgba(88, 132, 206, 0.05) 0%, rgba(177, 162, 195, 0.05) 100%);
   --background-image-leftmenu:linear-gradient(90deg, rgba(88, 132, 206, 0.2) 0%, rgba(177, 162, 195, 0.2) 100%);
-  --background-image-sessions:linear-gradient(90deg, rgba(232, 232, 225, 0.12) 50%, rgba(199, 181, 193, 0.12) 75%);
+  --background-image-sessions:linear-gradient(90deg, rgba(232, 232, 225, 0.12) 50%, rgba(199, 181, 193, 0.12) 75%); 
   --background-image-searchbox:linear-gradient(90deg, rgba(96, 82, 169, 0.20) 0%, rgba(232, 232, 225, 0.20) 50%, rgba(199, 181, 193, 0.20) 75%, rgba(153, 83, 107, 0.20) 100%);
   --background-image-icons:linear-gradient(90deg, #E8E8E1 50%, #C7B5C1 75%) ;
   --background-image-profile: linear-gradient(90deg, rgba(88, 132, 206, 0.20) 0%, rgba(227, 196, 193, 0.20) 50%, rgba(225, 231, 203, 0.20) 75%, rgba(177, 162, 195, 0.20) 100%);
   --background-image-textm2: linear-gradient(90deg, #E8E8E1 50%, #C7B5C1 75%);
   --background-image-completeafer:linear-gradient(-270deg, rgba(88, 132, 206, 0.20) 0%, rgba(227, 196, 193, 0.20) 50%, rgba(225, 231, 203, 0.20) 75%, rgba(177, 162, 195, 0.20) 100%);
+  --background-image-spanSession:linear-gradient(-180deg, rgba(203, 238, 214, 0.20) 0%, rgba(74, 126, 208, 0.20) 100%);
+  --background-image-afterSpanSession:linear-gradient(180deg, #CBEED6 0%, #4A7ED0 100%);
+  --background-image-afterLabelTwoSession: linear-gradient(90deg, rgba(96, 82, 169, 0.20) 0%, rgba(232, 232, 225, 0.20) 50%, rgba(199, 181, 193, 0.20) 75%, rgba(153, 83, 107, 0.20) 100%);
   /*shadow*/
    --shadow-notify: 0px 0px 15.7921px rgba(163, 189, 206, 0.3);
    --shadow-attachbtn:0px 0px 10.3px rgba(255, 255, 255, 0.02);
    --shadow-voicebtn:0px 0px 10.3px rgba(0, 190, 241, 0.05);
    --shadow-completed:0px 4px 4px rgba(0, 0, 0, 0.25);
+   --sahdow-fly-dropdown:0 0 9.365px 5px rgba(255, 255, 255, 0.03);
 }
 
 /*
@@ -48,6 +55,18 @@
 
 */
 .initialafter::after{
+      content: "";
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 100%;
+    
+    height: 100%;
+    box-sizing: content-box;
+}
+.testafter::after{
       content: "";
     z-index: -1;
     top: 50%;
