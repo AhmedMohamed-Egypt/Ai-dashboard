@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 <body class="bg-wizard-black flex ">
   <div class="wizard-left-sideMenu relative">
@@ -77,14 +79,12 @@
     
     </div>
     <ul class="mt-[25px]">
-      <li class="flex items-center mb-5 relative">
-      <div class="flex items-center justify-between">
+      <li x-data="{ open: true }" class="flex  mb-5 relative items-start flex-col " x-data="{ active: false }">
+      <div class="flex items-center justify-between cursor-pointer" @click="open = !open">
           <span class="w-[18px] h-[18px] block bg-cover icon-IBM-1 "></span>
         <span class="gradient-red-text font-normal text-sm-11 ml-2.5 !bg-icons ">Entelligent Agent for Contract..</span>
-      
-       
       </div>
-        <div class=" w-full bg-wizard-black200 relative initialafter  rounded-md after:bg-completeafer after:rounded-md after:p-[2px] after:bg-wizard-black">
+        <div :class="!open ? 'h-[90px] overflow-visible mt-2' : 'h-0 overflow-hidden'"   class="[transition-property:height]  duration-500 wizard-left-sideMenu--dropdown__agent  w-full bg-wizard-black200 relative initialafter  rounded-md after:bg-completeafer after:rounded-md after:p-[2px] after:bg-wizard-black">
      <div class="flex items-start pl-2 py-2">
       <span class="w-[18px] h-[18px] block bg-cover icon-IBM-1 "></span>
          
