@@ -7,10 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
- <link
+ <!--<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  />-->
 <link rel="stylesheet" href="style.css">
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -313,8 +313,8 @@
   </div>
    <div class="wizard-home-page  w-[calc(100%-240px)] ml-auto">
    
-  <div class="wizard-home-page__notification h-screen flex flex-col py-12">
-        <div class="wizard-home-page__notification--border w-[580px] mx-auto animate__fadeIn animate__animated animate__slower animate__delay-3s  rounded-[60px]   shadow-notify">
+  <div x-data="{ active: false }" class="wizard-home-page__notification h-screen flex flex-col py-12">
+        <div class="relative wizard-home-page__notification--border w-[580px] mx-auto animate__fadeIn animate__animated animate__slower animate__delay-3s  rounded-[60px]   shadow-notify">
             <div class="flex    bg-notify rounded-[60px] py-[.5px] wizard-home-page__notification--container relative z-10">
             <div class="flex items-center justify-center">
             <div class="bkground-sphere  bg-cover">
@@ -323,7 +323,7 @@
            
                 <p class="mx-2 text-linear-notification font-pop flex flex-col"><span class="text-sm-10 font-medium">Workspace</span> <span class="text-sm-11 font-semibold">Contracts</span></p>
             
-            <button class="self-end cursor-pointer">
+            <button class="translate-y-1.5 cursor-pointer">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <path d="M8 11L3 6.00005L3.7 5.30005L8 9.60005L12.3 5.30005L13 6.00005L8 11Z" fill="#C7B5C1"/>
@@ -337,7 +337,7 @@
            
                 <p class="mx-2 text-linear-notification font-pop flex flex-col"><span class="text-sm-10 font-medium">Agent</span> <span class="text-sm-11 font-semibold">Data Minning</span></p>
            
-            <button class="self-end cursor-pointer">
+            <button class="translate-y-1.5 cursor-pointer">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <path d="M8 11L3 6.00005L3.7 5.30005L8 9.60005L12.3 5.30005L13 6.00005L8 11Z" fill="#C7B5C1"/>
@@ -351,7 +351,7 @@
            
                 <p class="mx-2 text-linear-notification font-pop flex flex-col"><span class="text-sm-10 font-medium">Session</span> <span class="text-sm-11 font-semibold">Untitled Minning</span></p>
            
-            <button class="self-end cursor-pointer">
+            <button class="translate-y-1.5 cursor-pointer">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <path d="M8 11L3 6.00005L3.7 5.30005L8 9.60005L12.3 5.30005L13 6.00005L8 11Z" fill="#C7B5C1"/>
@@ -360,7 +360,7 @@
             </button>
 
             </div>
-        <div class="self-center cursor-pointer w-[60px] justify-center flex">
+        <div   @click="active = !active"  class="self-center cursor-pointer w-[60px] justify-center flex">
 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
 <path d="M13 8.29295V7H12V8.5C12 8.6326 12.0527 8.75975 12.1465 8.8535L13.5 10.2071V11H2.5V10.2071L3.8535 8.8535C3.94727 8.75975 3.99997 8.6326 4 8.5V6.5C3.99871 5.79744 4.18283 5.10698 4.53375 4.49834C4.88468 3.8897 5.38999 3.38444 5.99866 3.03357C6.60733 2.68269 7.2978 2.49864 8.00036 2.49999C8.70292 2.50134 9.39268 2.68804 10 3.04125V1.92335C9.52404 1.71263 9.01782 1.57833 8.5 1.5254V0.5H7.5V1.5254C6.26734 1.65082 5.12496 2.22884 4.29377 3.1477C3.46257 4.06655 3.0016 5.26098 3 6.5V8.29295L1.6465 9.6465C1.55273 9.74025 1.50003 9.8674 1.5 10V11.5C1.5 11.6326 1.55268 11.7598 1.64645 11.8536C1.74021 11.9473 1.86739 12 2 12H5.5V12.5C5.5 13.163 5.76339 13.7989 6.23223 14.2678C6.70107 14.7366 7.33696 15 8 15C8.66304 15 9.29893 14.7366 9.76777 14.2678C10.2366 13.7989 10.5 13.163 10.5 12.5V12H14C14.1326 12 14.2598 11.9473 14.3536 11.8536C14.4473 11.7598 14.5 11.6326 14.5 11.5V10C14.5 9.8674 14.4473 9.74025 14.3535 9.6465L13 8.29295ZM9.5 12.5C9.5 12.8978 9.34196 13.2794 9.06066 13.5607C8.77936 13.842 8.39782 14 8 14C7.60218 14 7.22064 13.842 6.93934 13.5607C6.65804 13.2794 6.5 12.8978 6.5 12.5V12H9.5V12.5Z" fill="url(#paint0_linear_1029_519)"/>
@@ -374,6 +374,150 @@
 </svg>
         </div>
     </div>
+      <div :class="active ? 'translate-y-0' : 'translate-y-[-500px]'"
+  class="transition duration-500 initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
+>
+  <div class="w-[90%] mx-auto">
+    <!-- Header -->
+    <div
+      class="flex justify-between pb-[12px] items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
+    >
+      <p class="graditent-purple-text text-[20px] font-medium">Notifications</p>
+      <button>
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 11 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 1.29617L9.70383 0L5.5 4.20383L1.29617 0L0 1.29617L4.20383 5.5L0 9.70292L1.29708 11L5.5 6.79617L9.70475 11L11 9.70475L6.79617 5.5L11 1.29617Z"
+            fill="url(#paint0_linear_1425_14915)"
+          ></path>
+          <defs>
+            <linearGradient
+              id="paint0_linear_1425_14915"
+              x1="0"
+              y1="5.5"
+              x2="11"
+              y2="5.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.5" stop-color="#E8E8E1" />
+              <stop offset="0.75" stop-color="#C7B5C1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </button>
+    </div>
+
+    <!-- New Section -->
+    <div>
+      <p class="text-[20px] font-medium graditent-purple-text my-3">New</p>
+
+      <!-- Notification Item 1 -->
+      <div class="flex items-center mb-[20px] relative">
+        <span
+          class="mr-4 after:rounded-lg after:p-0.25 bg-[#3a383894] initialafter after:bg-afternotification w-[57px] h-[57px] block relative rounded-lg"
+        >
+          <span
+            class="notification-chart-icon w-[21px] h-[21px] block bg-cover centerElement"
+          ></span>
+        </span>
+
+        <div class="flex-1">
+          <div class="flex flex-col">
+            <p class="font-semibold text-[12px] graditent-purple-text">
+              Proposals Evaluator - Kuwait Contract
+            </p>
+            <p class="font-light text-sm-10 graditent-purple-text">
+              Hang tight — the agent is analyzing your input.
+            </p>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div
+              class="py-[3px] w-[90%] bg-wizard-black200 rounded-[100px] relative after:absolute after:top-0 after:left-0 after:bg-progresssky after:w-[60%] after:h-full after:rounded-[100px] shadow-progress-notification"
+            ></div>
+            <p
+              class="font-medium text-white text-[12px] inline-block min-w-[30px]"
+            >
+              60 <span class="font-medium graditent-purple-text">%</span>
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="absolute right-0 translate-y-[-15px] rounded-3xl initialafter bg-afterSpanSession p-[1px] after:rounded-3xl font-medium text-sm-10 text-white"
+        >
+          <span
+            class="block py-1.5 px-4 bg-wizard-black700 bg-btnnotification rounded-3xl text-sm-10"
+          >
+            <p class="flex items-center justify-between">
+              <span
+                class="font-semibold graditent-purple-text inline-block mr-[5px]"
+                >Open</span
+              >
+              <span class="icon-chevron"></span>
+            </p>
+          </span>
+        </button>
+      </div>
+
+      <!-- Notification Item 2 -->
+      <div class="flex items-center mb-[20px] relative">
+        <span
+          class="mr-4 after:rounded-lg after:p-0.25 bg-[#3a383894] initialafter after:bg-afternotification w-[57px] h-[57px] block relative rounded-lg"
+        >
+          <span
+            class="notification-chart-icon w-[21px] h-[21px] block bg-cover centerElement"
+          ></span>
+        </span>
+
+        <div class="flex-1">
+          <div class="flex flex-col">
+            <p class="font-semibold text-[12px] graditent-purple-text">
+              Proposals Evaluator - Kuwait Contract
+            </p>
+            <p class="font-light text-sm-10 graditent-purple-text">
+              Hang tight — the agent is analyzing your input.
+            </p>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div
+              class="p-[3px] w-[90%] bg-wizard-black200 rounded-[100px] relative after:absolute after:top-0 after:left-0 after:bg-progresssky after:w-[100%] after:h-full after:rounded-[100px]"
+            ></div>
+            <p
+              class="font-medium text-white text-[12px] inline-block min-w-[30px]"
+            >
+              100 <span class="font-medium graditent-purple-text">%</span>
+            </p>
+          </div>
+        </div>
+
+        <button
+          class="absolute right-0 translate-y-[-15px] rounded-3xl initialafter bg-afterSpanSession p-[1px] after:rounded-3xl font-medium text-sm-10 text-white"
+        >
+          <span
+            class="block py-1.5 px-4 bg-wizard-black700 bg-btnnotification rounded-3xl text-sm-10"
+          >
+            <p class="flex items-center justify-between">
+              <span
+                class="font-semibold graditent-purple-text inline-block mr-[5px]"
+                >Insights</span
+              >
+              <span class="icon-chevron"></span>
+            </p>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+ 
+</div>
     
     </div>
 
@@ -593,81 +737,8 @@ contracts before they become problems </p>
     </div>
   </div>
    </div>
-   <div class="initialafter w-[560px] py-[25px]  after:p-[3px] rounded-[25px] border border-white/20 hidden bg-wizard-black bg-notifypopup notifications-modal fixed left-0 right-0 mx-auto top-[150px] ">
-  <div class="w-[90%] mx-auto">
-   <div class="flex justify-between pb-[12px] items-center relative after:absolute after after:bottom-0  top-auto left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]">
 
 
-      <p class="graditent-purple-text text-[20px] font-medium">Notifications</p>
-      <button>
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 1.29617L9.70383 0L5.5 4.20383L1.29617 0L0 1.29617L4.20383 5.5L0 9.70292L1.29708 11L5.5 6.79617L9.70475 11L11 9.70475L6.79617 5.5L11 1.29617Z" fill="url(#paint0_linear_1425_14915)"/>
-<defs>
-<linearGradient id="paint0_linear_1425_14915" x1="0" y1="5.5" x2="11" y2="5.5" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#E8E8E1"/>
-<stop offset="0.75" stop-color="#C7B5C1"/>
-</linearGradient>
-</defs>
-</svg>
-</button>
-     </div>
-     <div>
-      <p class="text-[20px] font-medium graditent-purple-text">New</p>
-      <div>
-        <div>
-          <div>
-        <div class="flex items-center">
-              <span class="bg-red-600 w-[57px] h-[57px] block relative rounded-lg">
-                <span class="notification-chart-icon w-[21px] h-[21px] block bg-cover centerElement"></span>
-              </span>
-              <div>
-               <div class="flex flex-col">
-                   <p class="font-semibold text-[12px] graditent-purple-text">Proposals Evaluator - Kuwait Contract</p>
-                <p class="font-light text-sm-10 graditent-purple-text">Hang tight — the agent is analyzing your input.</p>
-               </div>
-              <div class="flex justify-between items-center">
-                 <div class="p-2 w-full bg-wizard-black200 rounded-[100px] after:rounded-[100px] relative after after:absolute after:top-0 after:left-0 after:bg-progresssky after:w-[60%] after:h-full">
-</div>
-               <div class="">
-               <p class="font-medium text-white text-[12px] inline-block min-w-[30px]">60 <span class="font-medium graditent-purple-text">%</span></p>
-              </div>
-              
-            </div>
-            
-          </div>
-          <button for="" class=" relative initialafter bg-afterSpanSession p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[7px] bg-wizard-black700 bg-spanSession rounded-xs text-sm-10 "><p class="flex items-center justify-between" ><span class="font-semibold graditent-purple-text">Open</span> <span class="icon-chevron"></span>
-</p></span>
-          </button>
-        </div>
-         <div class="flex items-center">
-              <span class="bg-red-600 w-[57px] h-[57px] block relative rounded-lg">
-                <span class="notification-chart-icon w-[21px] h-[21px] block bg-cover centerElement"></span>
-              </span>
-              <div>
-               <div class="flex flex-col">
-                   <p class="font-semibold text-[12px] graditent-purple-text">Proposals Evaluator - Kuwait Contract</p>
-                <p class="font-light text-sm-10 graditent-purple-text">Hang tight — the agent is analyzing your input.</p>
-               </div>
-              <div class="flex justify-between items-center">
-                 <div class="p-2 w-full bg-wizard-black200 rounded-[100px] after:rounded-[100px] relative after after:absolute after:top-0 after:left-0 after:bg-progresssky after:w-[60%] after:h-full">
-</div>
-               <div class="">
-               <p class="font-medium text-white text-[12px] inline-block min-w-[30px]">60 <span class="font-medium graditent-purple-text">%</span></p>
-              </div>
-              
-            </div>
-            
-          </div>
-          <button for="" class=" relative initialafter bg-afterSpanSession p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[7px] bg-wizard-black700 bg-spanSession rounded-xs text-sm-10 "><p class="flex items-center justify-between" ><span class="font-semibold graditent-purple-text">Open</span> <span class="icon-chevron"></span>
-</p></span>
-          </button>
-        </div>
-      </div>
-     </div>
-  </div>
-   </div>
-   <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
