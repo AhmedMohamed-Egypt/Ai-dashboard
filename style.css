@@ -43,12 +43,32 @@
   --background-image-spanSession:linear-gradient(-180deg, rgba(203, 238, 214, 0.20) 0%, rgba(74, 126, 208, 0.20) 100%);
   --background-image-afterSpanSession:linear-gradient(180deg, #CBEED6 0%, #4A7ED0 100%);
   --background-image-afterLabelTwoSession: linear-gradient(90deg, rgba(96, 82, 169, 0.20) 0%, rgba(232, 232, 225, 0.20) 50%, rgba(199, 181, 193, 0.20) 75%, rgba(153, 83, 107, 0.20) 100%);
-  /*shadow*/
+   --background-image-afterpurple:linear-gradient(90deg, #C7B5C180, #C7B5C180);
+   --background-image-notifypurple:linear-gradient(90deg, rgba(88, 132, 206, 0.2) 0%, rgba(227, 196, 193, 0.2) 50%, rgba(225, 231, 203, 0.2) 75%, rgba(177, 162, 195, 0.2) 100%);
+  --background-image-progresssky:linear-gradient(-90deg, #DDFFFE 0%, #4A7ED0 100%);
+  --background-image-notifypopup:linear-gradient(
+  -45deg,
+  rgba(88, 132, 206, 0.2) 0%,
+  rgba(227, 196, 193, 0.2) 50%,
+  rgba(225, 231, 203, 0.2) 75%,
+  rgba(177, 162, 195, 0.2) 100%
+);
+   /*shadow*/
    --shadow-notify: 0px 0px 15.7921px rgba(163, 189, 206, 0.3);
    --shadow-attachbtn:0px 0px 10.3px rgba(255, 255, 255, 0.02);
    --shadow-voicebtn:0px 0px 10.3px rgba(0, 190, 241, 0.05);
    --shadow-completed:0px 4px 4px rgba(0, 0, 0, 0.25);
    --sahdow-fly-dropdown:0 0 9.365px 5px rgba(255, 255, 255, 0.03);
+}
+.centerElement{
+  @apply absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%];
+}
+.icon-chevron{
+  background-size:cover;
+  width:10px;
+  height:10px;
+  display:block;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='9' viewBox='0 0 10 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.6875 0L5.10656 0.565906L8.18594 3.65625H0V4.46875H8.18594L5.10656 7.54528L5.6875 8.125L9.75 4.0625L5.6875 0Z' fill='url(%23paint0_linear_1425_14961)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1425_14961' x1='0' y1='4.0625' x2='9.75' y2='4.0625' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.5' stop-color='%23E8E8E1'/%3E%3Cstop offset='0.75' stop-color='%23C7B5C1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
 }
 .bkground-sphere{
 }
@@ -59,6 +79,10 @@
 
 
 */
+/*icons*/
+.notification-chart-icon{
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='21' viewBox='0 0 21 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='21' height='21' fill='white' fill-opacity='0.01'/%3E%3Cpath d='M18.7591 3.28096L16.7911 5.25037L17.7191 6.17771L19.6871 4.2083L18.7591 3.28096Z' fill='url(%23paint0_linear_1425_14968)'/%3E%3Cpath d='M10.5 13.4531L7.21875 10.1975L8.26219 9.16716L10.5 11.3853L15.3628 6.5625L16.4062 7.59872L10.5 13.4531Z' fill='url(%23paint1_linear_1425_14968)'/%3E%3Cpath d='M2.625 18.375V16.6773L6.83425 12.4688L5.90625 11.5402L2.625 14.8214V1.3125H1.3125V18.375C1.3125 18.7231 1.45078 19.0569 1.69692 19.3031C1.94306 19.5492 2.2769 19.6875 2.625 19.6875H19.6875V18.375H2.625Z' fill='url(%23paint2_linear_1425_14968)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_1425_14968' x1='1.3125' y1='10.5' x2='19.6875' y2='10.5' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.5' stop-color='%23E8E8E1'/%3E%3Cstop offset='0.75' stop-color='%23C7B5C1'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_1425_14968' x1='1.3125' y1='10.5' x2='19.6875' y2='10.5' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.5' stop-color='%23E8E8E1'/%3E%3Cstop offset='0.75' stop-color='%23C7B5C1'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear_1425_14968' x1='1.3125' y1='10.5' x2='19.6875' y2='10.5' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.5' stop-color='%23E8E8E1'/%3E%3Cstop offset='0.75' stop-color='%23C7B5C1'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+}
 .initialafter::after{
       content: "";
     z-index: -1;
@@ -122,13 +146,20 @@
 .wizard-left-sideMenu--newSessions{
   @apply  rounded-[5px]  bg-viewmoreParent after:bg-leftmenu relative after:rounded-[5px] after:top-[1px] after:left-[1px] after:w-[99%] after:h-[95%] after:bg-wizard-black;
 }
-.gradient-red-text{
-    
-    background-image: linear-gradient(45deg, #E8E8E1 50%, #C7B5C1 75%, #99536B 100%);
-    background-clip: text;
+.gradient-red-text,.graditent-purple-text{
+background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+}
+.gradient-red-text{
+    
+    background-image: linear-gradient(45deg, #E8E8E1 50%, #C7B5C1 75%, #99536B 100%);
+    
+}
+.graditent-purple-text{
+  background-image: linear-gradient(90deg, #E8E8E1 50%, #C7B5C1 75%);
+
 }
 body{
   font-family: "Poppins", sans-serif;
