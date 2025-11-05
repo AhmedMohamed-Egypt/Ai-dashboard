@@ -1,6 +1,10 @@
 import { defineConfig } from 'vite'
 import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
+  
+    base: './', // important for Netlify
+
+
     theme: {
     extend: {
       colors: {
