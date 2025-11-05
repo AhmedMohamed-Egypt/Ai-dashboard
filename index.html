@@ -7,12 +7,16 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+<link rel="stylesheet" href="style.css">
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 </head>
 <body class="bg-wizard-black flex ">
-  <div class="wizard-left-sideMenu fixed lef-0  transition-all duration-300 ease-in-out " x-data="{ open: false }"  :class="open ? 'hidemenuwizard' : 'showmenuwizard'">
+  <div class="animate__fadeIn animate__animated animate__slower animate__delay-3s wizard-left-sideMenu fixed lef-0  transition-all duration-300 ease-in-out " x-data="{ open: false }"  :class="open ? 'hidemenuwizard' : 'showmenuwizard'">
     <div class="wizard-left-sideMenu--logo ">
      <a href="#">
      <span class="w-[37px] h-[37px] bg-cover block"></span>
@@ -310,8 +314,8 @@
    <div class="wizard-home-page w-full">
    
   <div class="wizard-home-page__notification">
-        <div class="wizard-home-page__notification--border w-[550px] rounded-[60px] mx-auto  shadow-notify">
-            <div class="flex  mt-[50px]  bg-notify rounded-[60px] py-3 wizard-home-page__notification--container relative z-10">
+        <div class="wizard-home-page__notification--border animate__fadeIn animate__animated animate__slower animate__delay-3s w-[550px] rounded-[60px] mx-auto  shadow-notify">
+            <div class="flex  mt-[50px]  bg-notify rounded-[60px] py-[.5px] wizard-home-page__notification--container relative z-10">
             <div class="flex items-center justify-center">
             <div class="bkground-sphere  bg-cover">
               <img src="/imgs/Contracts-top-icon.png" alt="">
@@ -376,16 +380,16 @@
 
 
 
-    <div class="wizard-home-page__sphere flex justify-center mt-[60px]">
+    <div class="wizard-home-page__sphere flex justify-center mt-[60px] animate__animated animate__fadeInDownBig animate__slower">
         <img src="/imgs/sphere.png" alt="">
     </div> 
-    <div class="wizard-home-page__heading flex justify-center">
-        <h1 class="font-pop font-normal text-[54px] text-center mb-[50px]">Welcome to the Contracts! </h1>
+    <div class="wizard-home-page__heading flex justify-center animate__fadeIn animate__animated animate__slower animate__delay-3s">
+        <h1 class="font-pop font-normal text-[54px] text-center mb-[50px] ">Welcome to the Contracts! </h1>
         <span class="text-[50px]">&#128075;</span> 
     </div>
-    <div class="wizard-home-page__cards  w-[775px] mx-auto">
+    <div class="wizard-home-page__cards  w-[850px] mx-auto">
        <div class="flex flex-wrap  justify-between">
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:3.5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
@@ -413,7 +417,7 @@
 </div>
   
       
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:4s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="21" height="21" transform="translate(21) rotate(90)" fill="white" fill-opacity="0.01"/>
@@ -439,7 +443,7 @@
   
 
            
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:4.5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="17" height="17" fill="white" fill-opacity="0.01"/>
@@ -468,7 +472,7 @@ contracts before they become problems </p>
   
 
         
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
@@ -497,7 +501,7 @@ contracts before they become problems </p>
   
 
         
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:5.5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
@@ -525,7 +529,7 @@ contracts before they become problems </p>
 
        
          
-            <div class="wizard-home-page__cards--dummy">
+            <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:6s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="16" height="16" fill="white" fill-opacity="0.01"/>
@@ -556,7 +560,7 @@ contracts before they become problems </p>
 
       
     </div>
-    <div class="flex justify-end mt-1">
+    <div class="flex justify-end mt-1 animate__fadeIn animate__animated animate__slower [animation-delay:6.5s]">
       <div class=" rounded-[50px] bg-viewmoreParent afterPesdu relative after:rounded-[50px] after:top-[1px] after:left-[2px] after:w-[97%] after:h-[93%] after:bg-wizard-black">
         <button class="relative z-10 rounded-[50px] px-[23px] py-[7px] cursor-pointer font-pop text-sm-10 text-white font-medium flex items-center  bg-viewmore "><span class="inline-block mr-2">View More </span>
           <span class="iconArrow block w-[13px] h-[13px] bg-cover">
@@ -565,7 +569,7 @@ contracts before they become problems </p>
     </div>
     </div>
 
-    <div class="wizard-home-page__chatBar w-[calc(100%-240px)] fixed left-auto right-0 bottom-[50px] translate-y-2">
+    <div class="animate__fadeIn animate__animated animate__slower animate__delay-3s  wizard-home-page__chatBar w-[calc(100%-240px)] fixed left-auto right-0 bottom-[50px] translate-y-2">
       <div class="flex items-center bg-chatbar wizard-home-page__chatBar--container max-w-full w-[1000px] mx-auto border border-wizard-lightGrey py-[12px] px-[7px] rounded-[37px] ">
   <button class="shadow-attachbtn pt-2.5 pb-2 px-[9px]  rounded-[35px] flex items-center bg-attachbtn wizard-home-page__chatBar--chat-button ">
  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

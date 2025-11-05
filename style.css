@@ -199,7 +199,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox=
 }
 .wizard-home-page__cards .wizard-home-page__cards--dummy{
   position:relative;
-  width:250px;
+  width:275px;
   margin-bottom:10px;
 }
 .wizard-home-page__cards .wizard-home-page__cards--1{
@@ -208,7 +208,7 @@ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox=
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 15px;
-    min-height:100px;
+    
 }
 
 .wizard-home-page__cards--dummy{
@@ -273,3 +273,38 @@ background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox=
 .wizard-left-sideMenu--dropdown--search label{
     font-size:10px;
 }
+
+  @keyframes fadeDownSmooth {
+    0% {
+      opacity: 0;
+      transform: translateY(-80px);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .fadeDownSmooth {
+    animation: fadeDownSmooth 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* bounce خفيف مستمر */
+  @keyframes subtleBounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .subtleBounce {
+    animation: subtleBounce 2.5s ease-in-out infinite;
+  }
