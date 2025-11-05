@@ -158,18 +158,16 @@ background-image: linear-gradient(90deg, rgba(96, 82, 169, 0.2) 0%, rgba(232, 23
 position:relative;
 }
 .wizard-home-page__notification--border::after{
-       content: "";
+         content: "";
     position: absolute;
-    top: 1px;
-    left: 2px;
+    top: 2px;
+    left: -1px;
     width: 99%;
     height: 95%;
-  
     border-radius: 60px;
     right: 0;
     margin: auto;
     background: #212121;
-    /* z-index: 0; */
 }
 
 .bkground-discovery-icon{
