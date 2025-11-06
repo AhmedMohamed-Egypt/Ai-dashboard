@@ -6,12 +6,12 @@
   "author": "",
   "type": "module",
   "main": "index.js",
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR",
-    "not dead"
-  ],
+ "browserslist": [
+  "Safari >= 8",
+  "iOS >= 8",
+  "last 2 versions",
+  ">0.5%"
+],
   "scripts": {
     "dev": "vite",
     "build": "vite build",

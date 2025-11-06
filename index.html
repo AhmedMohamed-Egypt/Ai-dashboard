@@ -381,11 +381,14 @@
         
     </div>
    
-    <div  :class="active ? 'translate-y-0!' : 'translate-y-[-500px]'" 
+    <div   :class="active 
+    ? '!translate-y-0 transform-gpu transition-transform duration-500'
+    : 'translate-y-[-32rem] transform-gpu transition-transform duration-500'"
+
   class="transition  duration-500 initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
 >
   <div class="w-[90%] mx-auto">
-    <!-- Header -->
+    <!-- Header111 -->
     <div
       class="flex justify-between pb-3 items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
     >
