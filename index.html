@@ -7,10 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
- <link
+ <!--
+<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
+ -->
 <link rel="stylesheet" href="style.css">
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -104,7 +106,7 @@
 </svg>
 </button>
 <div class="invisible top-[50px] group-hover:top-2 group-hover:visible 
-          duration-300  initialafter sahdow-fly-dropdown py-4 after:bg-profile rounded-[15px] after:rounded-[15px] bg-black200 bg-wizard-black after:p-[1px] wizard-left-sideMenu--dropdown--list__flydropdown absolute  right-[-300px] w-[300px] ">
+          duration-300  initialafter sahdow-fly-dropdown py-4 after:bg-profile rounded-[15px] after:rounded-[15px] bg-black200 bg-wizard-black after:p-[1px] wizard-left-sideMenu--dropdown--list__flydropdown absolute  right-[-200px] w-[200px] ">
   
            <ul>
     <li class="flex items-center mb-[15px] pl-5 cursor-pointer">
@@ -311,6 +313,9 @@
 
 
   </div>
+
+
+
    <div class="wizard-home-page  w-[calc(100%-240px)] ml-auto">
    
   <div x-data="{ active: false }" class="wizard-home-page__notification h-screen flex flex-col py-12">
@@ -375,16 +380,17 @@
         </div>
         
     </div>
-      <div :class="active ? '!translate-y-0' : 'translate-y-[-500px]'"
-  class="transition translate-y-[-500px] duration-500 initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
+   
+    <div  :class="active ? 'translate-y-0!' : 'translate-y-[-500px]'" 
+  class="transition  duration-500 initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
 >
   <div class="w-[90%] mx-auto">
     <!-- Header -->
     <div
-      class="flex justify-between pb-[12px] items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
+      class="flex justify-between pb-3 items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
     >
       <p class="graditent-purple-text text-[20px] font-medium">Notifications</p>
-      <button>
+      <button @click="active = !active">
         <svg
           width="11"
           height="11"
@@ -413,8 +419,9 @@
       </button>
     </div>
 
-    <!-- New Section -->
-    <div>
+    
+     <!--when notification length > 0-->
+    <div  class="">
       <p class="text-[20px] font-medium graditent-purple-text my-3">New</p>
 
       <!-- Notification Item 1 -->
@@ -515,16 +522,149 @@
         </button>
       </div>
     </div>
+
   </div>
 
  
 </div>
-    
+ <!--no notifications-->
+<!--when notification length == 0-->
+<!--ready for direct integration i just displayed hidden -->
+  <div style="display: none;"
+  class="transition h-[280px]  duration-500 initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
+>
+  <div class="w-[90%] mx-auto">
+    <!-- Header -->
+    <div
+      class="flex justify-between pb-[12px] items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
+    >
+      <p class="graditent-purple-text text-[20px] font-medium">Notifications</p>
+      <button>
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 11 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 1.29617L9.70383 0L5.5 4.20383L1.29617 0L0 1.29617L4.20383 5.5L0 9.70292L1.29708 11L5.5 6.79617L9.70475 11L11 9.70475L6.79617 5.5L11 1.29617Z"
+            fill="url(#paint0_linear_1425_14915)"
+          ></path>
+          <defs>
+            <linearGradient
+              id="paint0_linear_1425_14915"
+              x1="0"
+              y1="5.5"
+              x2="11"
+              y2="5.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.5" stop-color="#E8E8E1" />
+              <stop offset="0.75" stop-color="#C7B5C1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </button>
     </div>
 
 
+  
+   <div  class=" notifications-modal--zeroNotification flex flex-col absolute translate-x-[-50%] translate-y-[-50%] top-[60%] left-[50%] w-full items-center">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" width="47" height="53" viewBox="0 0 47 53" fill="none">
+  <path d="M46.7188 7.1875L40.2051 14.375H46.7188V17.9688H35.9375V14.375L42.6758 7.1875H35.9375V3.59375H46.7188V7.1875ZM46.1923 32.8702C46.5292 33.2071 46.7188 33.6643 46.7188 34.1406V39.5312C46.7188 40.5235 45.915 41.3281 44.9219 41.3281H32.3438V43.125C32.3438 48.0786 28.313 52.1094 23.3594 52.1094C18.4058 52.1094 14.375 48.0786 14.375 43.125V41.3281H1.79688C0.803742 41.3281 0 40.5235 0 39.5312V34.1406C0 33.6643 0.18957 33.2071 0.526484 32.8702L5.39062 28.0061V21.5627C5.39062 12.2615 12.4956 4.58976 21.5625 3.68521V0H25.1562V3.68503C27.0579 3.8746 28.8652 4.37737 30.5469 5.11516V8.98438C28.4296 7.75513 25.9789 7.1875 23.3594 7.1875C15.4332 7.1875 8.98438 13.6363 8.98438 21.5625V28.75C8.98438 29.2264 8.7948 29.6835 8.45789 30.0204L3.59375 34.8845V37.7344H43.125V34.8845L38.2609 30.0204C37.9239 29.6835 37.7344 29.2264 37.7344 28.75V23.3594H41.3281V28.0059L46.1923 32.8702ZM28.75 41.3281H17.9688V43.125C17.9688 46.0976 20.3868 48.5156 23.3594 48.5156C26.3319 48.5156 28.75 46.0976 28.75 43.125V41.3281Z" fill="url(#paint0_linear_1551_14815)" fill-opacity="0.12"/>
+  <defs>
+    <linearGradient id="paint0_linear_1551_14815" x1="0" y1="26.0547" x2="46.7188" y2="26.0547" gradientUnits="userSpaceOnUse">
+      <stop offset="0.5" stop-color="#E8E8E1"/>
+      <stop offset="0.75" stop-color="#C7B5C1"/>
+    </linearGradient>
+  </defs>
+</svg>
+    </div>
+    <div class="text-[12px] font-normal flex flex-col items-center">
+      <p class="gradient-notify-text mt-[20px]">No Notifications Yet</p>
+      <p class="gradient-notify-text">You’re all caught up! We’ll let you know when something new arrives.</p>
+    </div>
+   </div>
+  </div>
 
+ 
+</div>
 
+<!--start workspace-->
+ <div  
+  class="transition  duration-500 initialafter w-[580px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal absolute top-[70px] right-0 mx-auto "
+>
+  <div class="w-[95%] mx-auto">
+    <!-- Header -->
+    <div
+      class="flex justify-between pb-3 items-center relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-[#c7b5c199]"
+    >
+      <p class="graditent-purple-text text-[20px] font-medium">Workspace</p>
+      <button @click="active = !active">
+        <svg
+          width="11"
+          height="11"
+          viewBox="0 0 11 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11 1.29617L9.70383 0L5.5 4.20383L1.29617 0L0 1.29617L4.20383 5.5L0 9.70292L1.29708 11L5.5 6.79617L9.70475 11L11 9.70475L6.79617 5.5L11 1.29617Z"
+            fill="url(#paint0_linear_1425_14915)"
+          ></path>
+          <defs>
+            <linearGradient
+              id="paint0_linear_1425_14915"
+              x1="0"
+              y1="5.5"
+              x2="11"
+              y2="5.5"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.5" stop-color="#E8E8E1" />
+              <stop offset="0.75" stop-color="#C7B5C1" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </button>
+    </div>
+
+    
+     
+    <div  class="mt-3">
+     <div class="py-[7px] flex relative z-40 rounded-lg after:rounded-lg items-center after:p-[2px] bg-sessions initialafter after:bg-afterLabelTwoSession ">
+      <img src="/imgs/Contracts-top-icon.png"  alt="">
+      <div class="pl-1">
+        <h2 class="font-semibold text-[12px] text-white">Contracts</h2>
+        <p class="tracking-wide font-light text-[12px] text-white">A centralized space to organize, review, and monitor contracts efficiently.</p>
+      </div>
+     </div>
+      <div class="my-[20px] py-[7px] flex relative z-40 rounded-lg after:rounded-lg items-center after:p-[2px] bg-sessions initialafter after:bg-afterLabelTwoSession ">
+      <img src="/imgs/comerical-ball.png"  alt="">
+      <div class="pl-1">
+        <h2 class="font-semibold text-[12px] text-white">Commercial</h2>
+        <p class="tracking-wide font-light text-[12px] text-white">Manage all your business deals, clients, and opportunities in one place.</p>
+      </div>
+     </div>
+      <div class="py-[7px] flex relative z-40 rounded-lg after:rounded-lg items-center after:p-[2px] bg-sessions initialafter after:bg-afterLabelTwoSession ">
+      <img src="/imgs/comerical-ball.png"  alt="">
+      <div class="pl-1">
+        <h2 class="font-semibold text-[12px] text-white">Company Registration</h2>
+        <p class="tracking-wide font-light text-[12px] text-white">Register, manage, and track company applications in one place.</p>
+      </div>
+     </div>
+
+    
+    </div>
+
+  </div>
+
+ 
+</div>
+<!--end workspace-->
+    </div>
     <div class="wizard-home-page__sphere flex justify-center mt-[60px] animate__animated animate__fadeInDownBig animate__slower relative z-[-1]">
         <img src="/imgs/sphere.png" alt="">
     </div> 
@@ -560,8 +700,6 @@
 </svg>
     </div>
 </div>
-  
-      
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:4s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -584,10 +722,7 @@
 </defs>
 </svg>
     </div>
-            </div>
-  
-
-           
+            </div>  
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:4.5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -614,9 +749,6 @@ contracts before they become problems </p>
 </svg>
     </div>
             </div>
-  
-
-        
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -643,9 +775,6 @@ contracts before they become problems </p>
 </svg>
     </div>
 </div>
-  
-
-        
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:5.5s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -670,10 +799,6 @@ contracts before they become problems </p>
 </svg>
     </div>
             </div>
-  
-
-       
-         
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:6s]">
                   <div class="flex  bg-card items-start rounded-lg p-2 wizard-home-page__cards--1">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -701,9 +826,6 @@ contracts before they become problems </p>
 </svg>
     </div>
             </div>
-  
-
-      
     </div>
     <div class="flex justify-end mt-1 animate__fadeIn animate__animated animate__slower [animation-delay:6.5s]">
       <div class=" rounded-[50px] bg-viewmoreParent afterPesdu relative after:rounded-[50px] after:top-[1px] after:left-[2px] after:w-[97%] after:h-[93%] after:bg-wizard-black">
@@ -713,7 +835,6 @@ contracts before they become problems </p>
       </div>
     </div>
     </div>
-
     <div class="animate__fadeIn animate__animated animate__slower animate__delay-3s  wizard-home-page__chatBar  w-[1000px] mt-auto mx-auto">
       <div class="flex items-center bg-chatbar wizard-home-page__chatBar--container max-w-full  mx-auto border border-wizard-lightGrey py-[12px] px-[7px] rounded-[37px] ">
   <button class="shadow-attachbtn pt-2.5 pb-2 px-[9px]  rounded-[35px] flex items-center bg-attachbtn wizard-home-page__chatBar--chat-button ">
