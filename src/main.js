@@ -104,20 +104,27 @@ function enablePdfSelectionTools(iframe) {
 
 enablePdfSelectionTools(iframe);
 */
+
 //notifications-modal-active--btnCancel
 const btnNotify = document.querySelector('.wizard-home-page__notification--container--btn')
 const notifyContent = document.querySelector('.wizard-home-page__notification--border')
 const notifyModal = document.querySelector('.notifications-modal-active')
 const cancelnotify = document.querySelector('.notifications-modal-active--btnCancel')
+//remove animation after use one time 
+notifyContent.addEventListener('animationend', () => {
+  notifyContent.classList.remove('animate__fadeIn');
+});
 function addClass(btnAdd,elmnt,notifyContent,className){
   btnAdd.addEventListener('click',()=>{
     notifyContent.classList.add(className)
+     notifyContent.classList.remove('animate__fadeIn')
      elmnt.classList.add(className)
   })
 }
 addClass(btnNotify,notifyModal,notifyContent,'activeModal')
 function removeClass(btnCancel,elmnt,className){
   btnCancel.addEventListener('click',()=>{
+    notifyContent.classList.remove('animate__fadeIn')
     setTimeout(()=>{
       notifyContent.classList.remove(className)
     },300)
