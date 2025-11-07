@@ -104,3 +104,24 @@ function enablePdfSelectionTools(iframe) {
 
 enablePdfSelectionTools(iframe);
 */
+//notifications-modal-active--btnCancel
+const btnNotify = document.querySelector('.wizard-home-page__notification--container--btn')
+const notifyContent = document.querySelector('.wizard-home-page__notification--border')
+const notifyModal = document.querySelector('.notifications-modal-active')
+const cancelnotify = document.querySelector('.notifications-modal-active--btnCancel')
+function addClass(btnAdd,elmnt,notifyContent,className){
+  btnAdd.addEventListener('click',()=>{
+    notifyContent.classList.add(className)
+     elmnt.classList.add(className)
+  })
+}
+addClass(btnNotify,notifyModal,notifyContent,'activeModal')
+function removeClass(btnCancel,elmnt,className){
+  btnCancel.addEventListener('click',()=>{
+    setTimeout(()=>{
+      notifyContent.classList.remove(className)
+    },300)
+     elmnt.classList.remove(className)
+  })
+}
+removeClass(cancelnotify,notifyModal,'activeModal')
