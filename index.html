@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-<link
+<!--<link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  />-->
 
 <link rel="stylesheet" href="style.css">
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -145,13 +145,28 @@
      
 
           <span class="gradient-red-text font-semibold text-sm-11  !bg-icons hidden">Entelligent Agent for Contract..</span>
-          <div class="flex items-center mt-[5px]">
-            <label for="" class=" relative initialafter bg-afterSpanSession p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[7px] bg-wizard-black700 bg-spanSession rounded-xs">Completed</span>
-            </label>
-           <label for="" class="ml-2 relative after:!z-10 after:bg-afterLabelTwoSession after:p-[1px] initialafter    p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[10px] z-20 relative bg-sessions bg-wizard-black200  rounded-xs">Sat 1 Nov</span>
-            </label>
+          <div class="flex mt-[5px]  ">
+           
+        <!--   <label for="" class=" relative initialafter  p-[1.2px]  after:rounded-xs    font-normal text-sm-10 text-white  rounded-xs   ">
+              
+             <span class="block py-1 px-[7px] bg-no-repeat bg-completed-span bg-contain rounded-xs">Completed</span>
+            </label>-->
+                       <div  class="testdiv">
+    <span class="testspan1 testafter1 relative"><span class="spantext text-white text-[10px]">Completed</span></span>
+    
+   </div>
+
+
+                     <div class="testdiv ml-[10px]">
+    <span class="testspan2 testafter2 relative"><span class="spantext2 text-white text-[10px]">Sat 1 Nov</span></span>
+    
+   </div>
+
+
+    
+
+ 
+             </div>
         </div>
             
           </div>
@@ -164,8 +179,8 @@
           <span class="w-[18px] h-[18px] block bg-cover icon-IBM-1 "></span>
         <span class="gradient-red-text font-normal text-sm-11 ml-2.5 !bg-icons ">Entelligent Agent for Contract..</span>
       </div>
-        <div :class="!open ? 'h-[90px] overflow-visible mt-2' : 'h-0 overflow-hidden'" class="[transition-property:height] duration-500 wizard-left-sideMenu--dropdown__agent w-full bg-wizard-black200 relative initialafter rounded-md after:bg-completeafer after:rounded-md after:p-[2px] h-0 overflow-hidden">
-     <div class="flex items-start pl-2 py-2">
+        <div :class="!open ? 'h-[80px] overflow-visible mt-2' : 'h-0 overflow-hidden'" class="[transition-property:height] duration-500 wizard-left-sideMenu--dropdown__agent w-full bg-wizard-black200 relative initialafter rounded-md after:bg-completeafer after:rounded-md after:p-[2px] h-0 overflow-hidden">
+     <div class="flex items-start pl-2 py-[5px]">
       <span class="w-[18px] h-[18px] block bg-cover icon-IBM-1 "></span>
          
         <div class="pl-2">
@@ -219,12 +234,15 @@
 
           <span class="gradient-red-text font-semibold text-sm-11  !bg-icons hidden">Entelligent Agent for Contract..</span>
           <div class="flex items-center mt-[5px]">
-            <label for="" class=" relative testafter  p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[7px] bg-wizard-black700 bg-yellow border border-green200 rounded-xs">Processing</span>
-            </label>
-           <label for="" class="ml-2 relative after:!z-10 after:bg-afterLabelTwoSession after:p-[1px] initialafter    p-[1.2px]  after:rounded-xs    font-medium text-sm-10 text-white  rounded-xs   ">
-             <span class="block py-1 px-[10px] z-20 relative bg-sessions bg-wizard-black200  rounded-xs">Sat 1 Nov</span>
-            </label>
+      <div  class="testdiv">
+    <span class="testspan3 testafter3 relative"><span class="spantext3 text-white text-[10px]">Processing</span></span>
+    
+   </div>
+   <div class="testdiv ml-[10px]">
+    <span class="testspan2 testafter2 relative"><span class="spantext2 text-white text-[10px]">Sat 1 Nov</span></span>
+    
+   </div>
+
         </div>
             
           </div>
@@ -249,13 +267,13 @@
     </ul>
     </div>
  </div>
- <div class="wizard-left-sideMenu--profile flex items-center bg-profile rounded-[10px] py-3.5 absolute bottom-[50px] w-[90%] z-30">
-  <div class="flex items-center relative after:w-[.5px] after:bottom-0 after:bg-textm2 after:m-auto pl-2.5 pr-[50px] after after:h-[50%] after:absolute after:right-0 after:top-0 after:bg-[#E8E8E1]">
+ <div class="wizard-left-sideMenu--profile left-0 right-0 mx-auto  flex items-center bg-profile rounded-[10px] py-3.5 absolute bottom-[50px] w-[90%] z-30">
+  <div class="flex items-center relative after:right-0 after:w-[.5px] after:bottom-0 after:bg-textm2 after:m-auto pl-2.5 pr-[25px] after after:h-[50%] after:absolute after:right-0 after:top-0 after:bg-[#E8E8E1]">
     <img src="/imgs/profile-img.png" alt="">
     <div class="flex items-start">
-     <div class="text-white mx-[10px] flex flex-col">
-       <p class="font-medium text-[12px] gradient-red-text">Abdullah</p>
-      <p class="font-normal text-[10px] gradient-red-text">Manager</p>
+     <div class="text-white mx-[12px] flex flex-col">
+       <p class="font-medium text-[12px] text-white">Abdullah</p>
+      <p class="font-normal text-[10px] text-white">Manager</p>
      </div>
       <button class="translate-y-2.5"><svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M3.75 4.275L0 0.525L0.525 0L3.75 3.225L6.975 0L7.5 0.525L3.75 4.275Z" fill="url(#paint0_linear_1337_4069)"/>
@@ -305,14 +323,12 @@
    <span class="w-10 h-10 bg-cover block wizard-left-sideMenu__placeholder--iconplus" ></span>
    <span class="tracking-wide font-normal text-[12px] text-wizard-grey my-3">Session</span>
    <span class="w-10 h-10 bg-cover block wizard-left-sideMenu__placeholder--iconsearch" ></span>
-   <div class="absolute bottom-[50px]">
+   <div class="absolute bottom-0">
     <img src="/imgs/profile-img.png" alt="">
    </div>
  </div>
  </div>
 
-
-  </div>
 
 
 
@@ -621,15 +637,7 @@ contracts before they become problems </p>
               <h3 class="wizard-home-page__cards--txt text-[12px] font-normal">Contract Summarizer</h3>
             <p class="text-[10px] font-normal text-wizard-grey ">Explore insights through engaging charts and dashboards.</p>
           </div>
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.5 0L7.25214 3.39429L11 3.92857L8.25 6.41693L9.42857 10.2143L5.5 8.02057L1.57143 10.2143L2.75 6.41693L0 3.92857L3.85 3.39429L5.5 0Z" fill="url(#paint0_linear_1057_6683)"/>
-<defs>
-<linearGradient id="paint0_linear_1057_6683" x1="0" y1="5.10714" x2="11" y2="5.10714" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#E8E8E1"/>
-<stop offset="0.75" stop-color="#C7B5C1"/>
-</linearGradient>
-</defs>
-</svg>
+  
     </div>
 </div>
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:5.5s]">
@@ -645,15 +653,7 @@ contracts before they become problems </p>
               <h3 class="wizard-home-page__cards--txt text-[12px] font-normal">Proposals Evaluator</h3>
             <p class="text-[10px] font-normal text-wizard-grey">Analyze submitted proposals to ensure they meet project requirements</p>
           </div>
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.5 0L7.25214 3.39429L11 3.92857L8.25 6.41693L9.42857 10.2143L5.5 8.02057L1.57143 10.2143L2.75 6.41693L0 3.92857L3.85 3.39429L5.5 0Z" fill="url(#paint0_linear_1057_6683)"/>
-<defs>
-<linearGradient id="paint0_linear_1057_6683" x1="0" y1="5.10714" x2="11" y2="5.10714" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#E8E8E1"/>
-<stop offset="0.75" stop-color="#C7B5C1"/>
-</linearGradient>
-</defs>
-</svg>
+
     </div>
             </div>
             <div class="wizard-home-page__cards--dummy animate__fadeIn animate__animated animate__slower [animation-delay:6s]">
@@ -672,28 +672,20 @@ contracts before they become problems </p>
               <h3 class="wizard-home-page__cards--txt text-[12px] font-normal">Certificate Evaluator</h3>
             <p class="text-[10px] font-normal text-wizard-grey">Analyze submitted proposals to ensure they meet project requirements</p>
           </div>
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.5 0L7.25214 3.39429L11 3.92857L8.25 6.41693L9.42857 10.2143L5.5 8.02057L1.57143 10.2143L2.75 6.41693L0 3.92857L3.85 3.39429L5.5 0Z" fill="url(#paint0_linear_1057_6683)"/>
-<defs>
-<linearGradient id="paint0_linear_1057_6683" x1="0" y1="5.10714" x2="11" y2="5.10714" gradientUnits="userSpaceOnUse">
-<stop offset="0.5" stop-color="#E8E8E1"/>
-<stop offset="0.75" stop-color="#C7B5C1"/>
-</linearGradient>
-</defs>
-</svg>
+
     </div>
             </div>
     </div>
     <div class="flex justify-end mt-1 animate__fadeIn animate__animated animate__slower [animation-delay:6.5s]">
       <div class=" rounded-[50px] bg-viewmoreParent afterPesdu relative after:rounded-[50px] after:top-[1px] after:left-[1px] after:w-[99%] after:h-[95%] after:bg-wizard-black">
-        <button class="relative z-10 rounded-[50px] px-[23px] py-[10px] cursor-pointer font-pop text-sm-10 text-white font-medium flex items-center  bg-viewmore "><span class="inline-block mr-2 gradient-red-text">View More </span>
+        <button class="relative z-10 rounded-[50px] px-[23px] py-[10px] cursor-pointer font-pop text-sm-10 text-white font-medium flex items-center  bg-viewmore "><span class="inline-block mr-2 text-white">View More </span>
           <span class="iconArrow block w-[13px] h-[13px] bg-cover">
         </span></button>
       </div>
     </div>
     </div>
     <div class="animate__fadeIn animate__animated animate__slower animate__delay-3s  wizard-home-page__chatBar  w-[1000px] mt-auto mx-auto">
-      <div class="flex items-center bg-chatbar wizard-home-page__chatBar--container max-w-full  mx-auto border border-wizard-lightGrey py-[12px] px-[20px] rounded-[37px] ">
+      <div class="flex items-center bg-chatbar wizard-home-page__chatBar--container max-w-full  mx-auto border border-wizard-lightGrey p-[9px] rounded-[37px] ">
   <button class="shadow-attachbtn pt-2.5 pb-2 px-[9px]  rounded-[35px] flex items-center bg-attachbtn wizard-home-page__chatBar--chat-button ">
  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.075 8.48134L5.575 0.981342C4.325 -0.318658 2.275 -0.318658 0.975 0.931342C-0.325 2.18134 -0.325 4.28134 0.975 5.53134L1.025 5.58134L2.425 7.03134L3.125 6.33134L1.675 4.88134C0.825 4.03134 0.825 2.58134 1.675 1.73134C2.525 0.881342 3.975 0.831342 4.825 1.68134C4.825 1.68134 4.825 1.68134 4.875 1.73134L12.325 9.18134C13.225 10.0313 13.225 11.4813 12.375 12.3313C11.525 13.2313 10.075 13.2313 9.225 12.3813C9.225 12.3813 9.225 12.3813 9.175 12.3313L5.475 8.63134C4.975 8.13134 5.025 7.33134 5.475 6.88134C5.975 6.43134 6.725 6.43134 7.225 6.88134L9.275 8.93134L9.975 8.23134L7.875 6.13134C6.975 5.28134 5.575 5.33134 4.725 6.23134C3.925 7.08134 3.925 8.43134 4.725 9.33134L8.475 13.0813C9.725 14.3813 11.775 14.3813 13.075 13.1313C14.375 11.8813 14.375 9.78134 13.075 8.48134C13.075 8.53134 13.075 8.48134 13.075 8.48134Z" fill="white"/>
@@ -719,14 +711,15 @@ contracts before they become problems </p>
   
 <!--Notiifction-->
 
-    <div    class="transition !translate-y-[-150%] translate-x-[21%]  duration-[1.5s] initialafter w-[560px] py-[25px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal-active absolute top-[70px] left-0  right-0 mx-auto "
+    <div    class="transition !translate-y-[-150%] translate-x-[21%]  duration-[1.5s] initialafter w-[560px] pt-[25px] pb-[5px] after:p-[3px] rounded-[25px] border border-white/20 bg-wizard-black bg-notifypopup notifications-modal-active absolute top-[70px] left-0  right-0 mx-auto "
 >
   <div class="w-[90%] mx-auto">
     <!-- Header111 -->
     <div
-      class="flex justify-between pb-3 items-center relative after:absolute after:bottom-0 after:left-0 after:border after:border-[#99536b1a] after:w-full after:h-[1px] after:bg-[#c7b5c199]"
+      class="flex justify-between pb-3 items-center relative after:absolute after:bottom-0 after:left-0  after:w-full after:h-[.5px] after:bg-[#c7b5c199]"
     >
-      <p class="graditent-purple-text text-[20px] font-medium">Notifications</p>
+    <!--graditent-purple-text-->
+      <p class="text-white text-[20px] font-medium">Notifications</p>
       <button class="notifications-modal-active--btnCancel">
         <svg
           width="11"
@@ -759,7 +752,8 @@ contracts before they become problems </p>
     
     
     <div  class="">
-      <p class="text-[20px] font-medium graditent-purple-text my-3">New</p>
+      <!--graditent-purple-text-->
+      <p class="text-[10px] font-normal text-white my-3">New</p>
 
       <!-- Notification Item 1 -->
       <div class="flex items-center mb-[20px] relative">
@@ -773,10 +767,10 @@ contracts before they become problems </p>
 
         <div class="flex-1">
           <div class="flex flex-col">
-            <p class="font-semibold text-[12px] graditent-purple-text">
+            <p class="font-semibold text-[12px] text-white tracking-[1px]">
               Proposals Evaluator - Kuwait Contract
             </p>
-            <p class="font-light text-sm-10 graditent-purple-text">
+            <p class="font-normal text-sm-10 text-[#FCFCFC] mt-[3px] tracking-[.5px]">
               Hang tight — the agent is analyzing your input.
             </p>
           </div>
@@ -797,11 +791,11 @@ contracts before they become problems </p>
           class="absolute right-0 translate-y-[-15px] rounded-3xl initialafter bg-afterSpanSession p-[1px] after:rounded-3xl font-medium text-sm-10 text-white"
         >
           <span
-            class="block py-1.5 px-4 bg-wizard-black700 bg-btnnotification rounded-3xl text-sm-10"
+            class="block px-[14px] py-[7px] bg-wizard-black700 bg-btnnotification rounded-3xl text-sm-10"
           >
             <p class="flex items-center justify-between">
               <span
-                class="font-semibold graditent-purple-text inline-block mr-[5px]"
+                class="font-semibold text-white inline-block mr-[5px] tracking-[.5px]"
                 >Open</span
               >
               <span class="icon-chevron"></span>
@@ -822,11 +816,11 @@ contracts before they become problems </p>
 
         <div class="flex-1">
           <div class="flex flex-col">
-            <p class="font-semibold text-[12px] graditent-purple-text">
+            <p class="font-semibold text-[12px] text-white tracking-[1px]">
               Proposals Evaluator - Kuwait Contract
             </p>
-            <p class="font-light text-sm-10 graditent-purple-text">
-              Hang tight — the agent is analyzing your input.
+            <p class="font-normal text-sm-10 text-[#FCFCFC] mt-[3px] tracking-[.5px]">
+             All set! The process has been successfully completed.
             </p>
           </div>
 
@@ -850,7 +844,7 @@ contracts before they become problems </p>
           >
             <p class="flex items-center justify-between">
               <span
-                class="font-semibold graditent-purple-text inline-block mr-[5px]"
+                class="font-semibold text-white inline-block mr-[5px] tracking-[.5px]"
                 >Insights</span
               >
               <span class="icon-chevron"></span>
