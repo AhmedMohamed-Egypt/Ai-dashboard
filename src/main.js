@@ -107,9 +107,12 @@ enablePdfSelectionTools(iframe);
 
 //notifications-modal-active--btnCancel
 const btnNotify = document.querySelector('.wizard-home-page__notification--container--btn')
+const btnWorkSpace = document.querySelector('.wizard-home-page__notification--container--workspaceBtn')
 const notifyContent = document.querySelector('.wizard-home-page__notification--border')
 const notifyModal = document.querySelector('.notifications-modal-active')
+const workspaceModal = document.querySelector('.notifications-modal__workspace')
 const cancelnotify = document.querySelector('.notifications-modal-active--btnCancel')
+const cancelWorkSpace = document.querySelector('.notifications-modal__workspace--cancelBtn')
 //remove animation after use one time 
 notifyContent.addEventListener('animationend', () => {
   notifyContent.classList.remove('animate__fadeIn');
@@ -122,6 +125,7 @@ function addClass(btnAdd,elmnt,notifyContent,className){
   })
 }
 addClass(btnNotify,notifyModal,notifyContent,'activeModal')
+addClass(btnWorkSpace,workspaceModal,notifyContent,'activeModal')
 function removeClass(btnCancel,elmnt,className){
   btnCancel.addEventListener('click',()=>{
     notifyContent.classList.remove('animate__fadeIn')
@@ -132,3 +136,4 @@ function removeClass(btnCancel,elmnt,className){
   })
 }
 removeClass(cancelnotify,notifyModal,'activeModal')
+removeClass(cancelWorkSpace,workspaceModal,'activeModal')
